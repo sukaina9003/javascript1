@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+        #button {
+            margin-left: 70px;
+            width: fit-content;
+            height: 40px;
+            margin-top: 120px;
+        }
+    </style>
+    <button class="btn btn-primary" id="button" onclick="myfunction1()">Question1</button>
+    <button class="btn btn-primary" id="button" onclick="myfunction2()">Question2</button>
+    <button class="btn btn-primary" id="button" onclick="myfunction3()">Question3</button>
+    <button class="btn btn-primary" id="button" onclick="myfunction4()">Question4</button>
+    <button class="btn btn-primary" id="button" onclick="myfunction5()">Question5</button>
+    <button class="btn btn-primary" id="button" onclick="myfunction6()">Question6</button>
+    <button class="btn btn-primary" id="button" onclick="myfunction7()">Question7</button>
+    
+    <script>
+        function myfunction1() {
+            const input = prompt("Enter a character (number or letter):");
+            if (input.length !== 1) {
+                console.log("Please enter a single character.");
+                return;
+            }
+            const charCode = input.charCodeAt(0);
+            if (charCode >= 48 && charCode <= 57) {
+                console.log("The character is a number.");
+            } else if (charCode >= 65 && charCode <= 90) {
+                console.log("The character is an uppercase letter.");
+            } else if (charCode >= 97 && charCode <= 122) {
+                console.log("The character is a lowercase letter.");
+            } else {
+                console.log("The character is neither a number nor a letter.");
+            }
+        }
+        function myfunction2() {
+            const firstNumber = parseInt(prompt("Enter the first integer:"));
+
+
+            if (isNaN(firstNumber)) {
+                console.log("Please enter a valid integer for the first number.");
+                return;
+            }
+            const secondNumber = parseInt(prompt("Enter the second integer:"));
+            if (isNaN(secondNumber)) {
+                console.log("Please enter a valid integer for the second number.");
+                return;
+            }
+            if (firstNumber > secondNumber) {
+                console.log("The larger number is: " + firstNumber);
+            } else if (secondNumber > firstNumber) {
+                console.log("The larger number is: " + secondNumber);
+            } else {
+                console.log("Both numbers are equal.");
+            }
+        }
+        function myfunction3() {
+            const number = parseFloat(prompt("Enter a number:"));
+
+            if (isNaN(number)) {
+                console.log("Please enter a valid number.");
+                return;
+            }
+            if (number > 0) {
+                console.log("The number is positive.");
+            } else if (number < 0) {
+                console.log("The number is negative.");
+            } else {
+                console.log("The number is zero.");
+            }
+
+        }
+        function myfunction4(character) {
+
+            character = character.toLowerCase();
+            if (character === 'a' || character === 'e' || character === 'i' || character === 'o' || character === 'u') {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function myfunction5() {
+            const correctPassword = "yourPassword123";
+            const userPassword = prompt("Please enter your password:");
+            if (!userPassword) {
+                console.log("Please enter your password");
+                return;
+            }
+            if (userPassword === correctPassword) {
+                console.log("Correct! The password you entered matches the original password.");
+            } else {
+                console.log("Incorrect password");
+            }
+
+        }
+        function myfunction6() {
+            var greeting;
+            var hour = 13;
+            if (hour < 18) {
+                greeting = "Good day";
+            } else {
+                greeting = "Good evening";
+            }
+        }
+        function myfunction7() {
+            const time24 = parseInt(prompt("Enter time in 24-hour clock format (e.g., 1900 for 7pm):"));
+            if (isNaN(time24)) {
+                console.log("Please enter a valid time.");
+                return;
+            }
+            let time12;
+            if (time24 >= 0 && time24 < 1200) {
+                time12 = time24 + "am";
+            } else if (time24 >= 1200 && time24 < 2400) {
+                time12 = (time24 - 1200) + "pm";
+            } else {
+                console.log("Invalid time entered.");
+                return;
+            }
+
+            console.log("Time in 12-hour clock format: " + time12);
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

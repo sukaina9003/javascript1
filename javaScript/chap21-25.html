@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Question1
+        let firstName = prompt("Enter your first name:");
+        let lastName = prompt("Enter your last name:");
+        let fullName = firstName + " " + lastName;
+        alert("Hello, " + fullName + "! Welcome.");
+        //Question2
+        let favoriteModel = prompt("What is your favorite mobile phone model?");
+        let lengthOfInput = favoriteModel.length;
+        document.write("<p>The length of your input is: " + lengthOfInput + "</p>");
+        //Question3
+        let word = "Pakistani";
+        let indexOfN = word.indexOf("n");
+        document.write("<p>The index of letter 'n' in the word 'Pakistani' is: " + indexOfN + "</p>");
+        //Question4
+        let words = "Hello World";
+        let lastIndex = words.lastIndexOf("l");
+        document.write("<p>The last index of letter 'l' in the word 'Hello World' is: " + lastIndex + "</p>");
+        //Question5
+        var wordss = "Pakistani";
+        var character = wordss.charAt(3);
+        document.write("<p>The character at 3rd index in the word 'Pakistani' is: " + character + "</p>");
+        //Question6
+        var Word = "Hyderabad";
+        var replacedWord = Word.replace("Hyder", "Islam");
+        document.write("<p>Original word: " + Word + "</p>");
+        document.write("<p>After replacement: " + replacedWord + "</p>");
+        //Question7
+        var message = "Ali and Sami are best friends. They play cricket and football together.";
+        var replacedMessage = message.split("and").join("&");
+        document.write("<p>Original message: " + message + "</p>");
+        document.write("<p>After replacement: " + replacedMessage + "</p>");
+        //Question8
+        var stringNumber = "472";
+        var convertedNumber = Number(stringNumber);
+        document.write("<p>String value: " + stringNumber + ", Type: " + typeof (stringNumber) + "</p>");
+        document.write("<p>Converted number: " + convertedNumber + ", Type: " + typeof (convertedNumber) + "</p>");
+        //Question9
+        var userInput = prompt("Enter some text:");
+        var uppercaseText = userInput.toUpperCase();
+        alert("Input in capital letters: " + uppercaseText);
+        //Question10
+        var userInput = prompt("Enter some text:");
+        var titleCaseText = userInput.toLowerCase().split(' ').map(function (word) {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        }).join(' ');
+        alert("Input in title case: " + titleCaseText);
+        //Question11
+        var num = 35.36;
+        var strNum = num.toString().replace(".", "");
+        document.write("<p>Original number: " + num + "</p>");
+        document.write("<p>Number without dot: " + strNum + "</p>");
+        //Question12
+        var username = prompt("Enter your username:");
+
+        if (username.includes("@") || username.includes(".") || username.includes(",") || username.includes("!")) {
+            alert("Please enter a valid username without special symbols.");
+        } else {
+            alert("Username accepted: " + username);
+        }
+        //Question13
+        var A = ["cake", "apple pie", "cookie", "chips", "patties"];
+        var userInput = prompt("Enter an item to search:").toLowerCase();
+
+        var found = false;
+        for (var i = 0; i < A.length; i++) {
+            if (A[i].toLowerCase() === userInput) {
+                found = true;
+                break;
+            }
+        }
+        if (found) {
+            alert("Yes, the item is found in the list.");
+        } else {
+            alert("No, the item is not found in the list.");
+        }
+        //Question14
+        var username = prompt("Enter your username:");
+
+        if (username.includes("@") || username.includes(".") || username.includes(",") || username.includes("!")) {
+            alert("Please enter a valid username without special symbols.");
+        } else {
+            alert("Username accepted: " + username);
+        }
+        //Question15
+        var A = ["cake", "apple pie", "cookie", "chips", "patties"];
+
+        var userInput = prompt("Enter an item to search:").toLowerCase();
+
+        var found = false;
+        for (var i = 0; i < A.length; i++) {
+            if (A[i].toLowerCase() === userInput) {
+                found = true;
+                break;
+            }
+        }
+        if (found) {
+            alert("Yes, the item is found in the list.");
+        } else {
+            alert("No, the item is not found in the list.");
+        }
+        //Question:16
+        var password = prompt("Enter your password:");
+
+        if (
+            !(/[a-zA-Z]/.test(password)) ||
+            !(/[0-9]/.test(password)) ||
+            /^[0-9]/.test(password) ||
+            password.length < 6
+        ) {
+            alert("Please enter a valid password according to the requirements.");
+        } else {
+            alert("Password accepted.");
+        }
+        //Question17
+        var university = "University of Karachi";
+        var universityArray = university.split(" ");
+
+        document.write("<p>Array elements:</p>");
+        document.write("<ul>");
+        for (var i = 0; i < universityArray.length; i++) {
+            document.write("<li>" + universityArray[i] + "</li>");
+        }
+        document.write("</ul>");
+    </script>
+</body>
+
+</html>

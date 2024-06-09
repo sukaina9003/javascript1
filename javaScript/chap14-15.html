@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Question1
+        var studentNamesLiteral = [];
+//Question2
+var studentNamesObject = new Array();
+//Question3
+var stringsArray = ["apple", "banana", "orange"];
+//Question4
+var numbersArray = [1, 2, 3, 4, 5];
+//Question5
+var booleanArray = [true, false, true];
+//Question6
+var mixedArray = ["apple", 5, true];
+//Question7
+var qualifications = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"];
+
+document.write("<h3>Qualification:</h3>");
+document.write("<ul>");
+for (var i = 0; i < qualifications.length; i++) {
+    document.write("<li>" + qualifications[i] + "</li>");
+}
+document.write("</ul>");
+//Question8
+var studentNames = ["John", "Alice", "Emma"];
+        var studentScores = [420, 380, 450];
+        for (var i = 0; i < studentNames.length; i++) {
+            var totalMarks = 500;
+            var obtainedMarks = studentScores[i];
+            var percentage = (obtainedMarks / totalMarks) * 100;
+
+            console.log("Student Name: " + studentNames[i]);
+            console.log("Obtained Marks: " + obtainedMarks);
+            console.log("Percentage: " + percentage.toFixed(2) + "%");
+            console.log("-----------------------------");
+        }
+//Question9
+var colors = ["red", "green", "blue"];
+
+        // Display the array elements in the browser
+        document.write("<h3>Initial Array:</h3>");
+        document.write(colors.join(", ") + "<br><br>");
+
+        // Ask the user what color to add to the beginning and add it
+        var colorToAddBeginning = prompt("Enter a color to add to the beginning:");
+        colors.unshift(colorToAddBeginning);
+
+        // Display the updated array in the browser
+        document.write("<h3>After adding color to the beginning:</h3>");
+        document.write(colors.join(", ") + "<br><br>");
+
+        // Ask the user what color to add to the end and add it
+        var colorToAddEnd = prompt("Enter a color to add to the end:");
+        colors.push(colorToAddEnd);
+
+        // Display the updated array in the browser
+        document.write("<h3>After adding color to the end:</h3>");
+        document.write(colors.join(", ") + "<br><br>");
+
+        // Add two more colors to the beginning of the array
+        colors.unshift("yellow", "orange");
+
+        // Display the updated array in the browser
+        document.write("<h3>After adding two colors to the beginning:</h3>");
+        document.write(colors.join(", ") + "<br><br>");
+
+        // Delete the first color in the array
+        colors.shift();
+
+        // Display the updated array in the browser
+        document.write("<h3>After deleting the first color:</h3>");
+        document.write(colors.join(", ") + "<br><br>");
+
+        // Delete the last color in the array
+        colors.pop();
+
+        // Display the updated array in the browser
+        document.write("<h3>After deleting the last color:</h3>");
+        document.write(colors.join(", ") + "<br><br>");
+
+        // Ask the user at which index to add a color and color name
+        var indexToAddColor = parseInt(prompt("Enter the index to add a color:"));
+        var colorToAdd = prompt("Enter the color to add:");
+        colors.splice(indexToAddColor, 0, colorToAdd);
+
+        // Display the updated array in the browser
+        document.write("<h3>After adding color at index:</h3>");
+        document.write(colors.join(", ") + "<br><br>");
+
+        // Ask the user at which index to delete color(s) and how many colors to delete
+        var indexToDelete = parseInt(prompt("Enter the index to delete color(s) from:"));
+        var numberOfColorsToDelete = parseInt(prompt("Enter the number of colors to delete:"));
+        colors.splice(indexToDelete, numberOfColorsToDelete);
+
+        // Display the updated array in the browser
+        document.write("<h3>After deleting color(s) at index:</h3>");
+        document.write(colors.join(", ") + "<br><br>");
+//Question10
+var studentScores = [85, 70, 92, 65, 78];
+console.log("Initial scores array:");
+console.log(studentScores);
+studentScores.sort(function(a, b) {
+    return a - b;
+});
+console.log("Sorted scores array:");
+console.log(studentScores);
+//Question11
+var studentScores = [85, 70, 92, 65, 78];
+console.log("Initial scores array:");
+console.log(studentScores);
+studentScores.sort(function(a, b) {
+    return a - b;
+});
+console.log("Sorted scores array:");
+console.log(studentScores);
+//Question12
+var arr = ["This ", " is ", " my ", " cat"];
+        var singleString = arr.join("")
+        console.log(singleString);
+
+//Question13
+var fifoArray = [];
+        fifoArray.push("Value 1");
+        fifoArray.push("Value 2");
+        fifoArray.push("Value 3");
+        console.log(fifoArray.shift()); 
+        console.log(fifoArray.shift()); 
+        console.log(fifoArray.shift()); 
+//Question14
+var lifoArray = [];
+        lifoArray.push("Value 1");
+        lifoArray.push("Value 2");
+        lifoArray.push("Value 3");
+        console.log(lifoArray.pop()); 
+        console.log(lifoArray.pop()); 
+        console.log(lifoArray.pop()); 
+//Question15
+var manufacturers = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+document.write("<select>");
+for (var i = 0; i < manufacturers.length; i++) {
+    document.write("<option value='" + manufacturers[i] + "'>" + manufacturers[i] + "</option>");
+}
+document.write("</select>");
+    </script>
+</body>
+</html>
